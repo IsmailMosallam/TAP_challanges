@@ -1,0 +1,206 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+     :root {
+        --background-color: #f1f1f1;
+        --color: #AA7B13;
+        --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        --card-padding: 20px;
+    }
+    
+    * {
+        box-sizing: border-box;
+        font-family: var(--font-family);
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--background-color);
+    }
+    
+    header {
+        display: flex;
+        width: 100%;
+        background-color: #333;
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .name h1 {
+        margin-top: 40px;
+        font-weight: 90px;
+        font-size: xx-large;
+        color: white;
+        letter-spacing: 7px;
+        float: right;
+    }
+    
+    .name p {
+        color: white;
+        letter-spacing: 2px;
+    }
+    
+    header img {
+        border-radius: 50%;
+        margin: 20px;
+        margin-left: 50px;
+    }
+    
+    .container {
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .card-one,
+    .card-two {
+        padding: var(--card-padding);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .card-one {
+        flex: 0 0 35%;
+        background: #eeecec;
+    }
+    
+    .card-two {
+        flex: 1;
+        background: #fff;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .container .header-container {
+            flex-direction: column;
+        }
+        .card-one,
+        .card-two {
+            flex: 1 0 100%;
+        }
+    }
+    
+    h3 {
+        padding: 8px;
+        background-color: white;
+        border-left: 9px solid var(--color);
+    }
+    
+    .card-two .experience h3,
+    .education h3 {
+        background-color: var(--background-color);
+    }
+    
+    ul {
+        padding: 0;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .icon {
+        margin-right: 10px;
+    }
+    
+    .text {
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .interest {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .interest div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .interest span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 50px;
+        border-radius: 5px;
+    }
+    
+    .skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skill {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .skill-name {
+        margin-right: 10px;
+    }
+    
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+    
+    .progress {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color);
+        width: 0;
+        height: 10px;
+        border-radius: 5px;
+    }
+    
+    .card-two span {
+        margin-right: 40px;
+        font-size: 15px;
+    }
+    
+    .my-ul li,
+    .education p {
+        font-size: small;
+        color: rgb(138, 128, 128);
+    }
+    
+    #print {
+        position: fixed;
+        top: 1rem;
+        left: 0;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: #000;
+        color: var(--color);
+        cursor: pointer;
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    @media print {
+        #print {
+            display: none;
+        }
+    }
